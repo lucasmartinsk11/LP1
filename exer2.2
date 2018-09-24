@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+
+int p, s, trocar = 0;
+
+printf("Digite um numero inteiro\n");
+scanf("%d", &p);
+printf("Digite outro numero inteiro\n");
+scanf("%d", &s);
+
+if(s < p){
+    
+    trocar = s;
+    s = p;
+    p = trocar;
+    
+}
+
+p = p+1;
+
+for(p; p < s; p++){
+    
+    printf("%d\n", p);
+    
+}
+
+}
