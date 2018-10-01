@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+int main (){
+    
+    int minha_conta = 0;    
+    int minha_conta2 = 0;
+    int valor = 0;
+    printf("Digite o valor da primeira conta:\n");
+    scanf("%d",&minha_conta);
+    printf("Digite o valor da segunda conta:\n");
+    scanf("%d,",&minha_conta2);
+    printf("Digite o valor da compra:\n");
+    scanf("%d,",&valor);
+    
+    
+    if(minha_conta > minha_conta2){compra(&minha_conta,valor);}
+    else{compra(&minha_conta2,valor);}
+    
+    printf("Valor da primeira conta:%d\nValor da segunda conta:%d",minha_conta,minha_conta2);
+    
+}
+
+
+
+
+void compra(int* conta,int valor){
+    
+    *conta = *conta - valor;
