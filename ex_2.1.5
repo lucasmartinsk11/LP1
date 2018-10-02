@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void main(){
+    
+    float soma = 0,num = 0;
+    
+    printf("Digite um número ou ZERO para cancelar:\n");
+    scanf("%f",&num);
+    
+    while(num != 0){
+        soma  = soma+num;
+        printf("Digite um número ou ZERO para cancelar:\n");
+        scanf("%f",&num);
+    }
+    
+    printf("Soma dos números: %.2f\n",soma);
+}
