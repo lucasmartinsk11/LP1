@@ -21,14 +21,14 @@ void main (){
 
 void compra(int* conta,int* conta2,int quant){
     
-    int valor[];
-    for(int i = 0; i <= quant; i++){
+    int valor[quant];
+    for(int i = 0; i < quant; i++){
         
         printf("Digite o valor da compra:\n");
         scanf("%d,",&valor[i]);
         
     }
-    for(int j = 0; j <= quant; j++){
+    for(int j = 0; j < quant; j++){
         
         if(*conta > *conta2){*conta = *conta - valor[j];}
         else{*conta2 = *conta2 - valor[j];}
