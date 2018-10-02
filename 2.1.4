@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void main(){
+    
+    float milhas = 0;
+    
+    printf("Digite sua velocidade em milhas\n");
+    scanf("%f", &milhas);
+    
+    if ((milhas*1.6) > 161.000){
+        printf("Reduza");
+    }else if((milhas*1.6) < 161.000 && (milhas*1.6) > 127.999){
+        printf("Mantenha");
+    }else{
+        printf("Acelere");
+    }
+    
+
+}
