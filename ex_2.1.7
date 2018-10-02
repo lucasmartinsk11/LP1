@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main(){
+    
+  typedef struct times_result{
+    	
+    		char nome[20];
+    		int vitoria;
+    		int empate;
+    		int derrota;
+    		int pontuacao;
+    		
+			}TIME;
+    
+
+    TIME times[20];
+    int i = 0;
+	for(i ; i < 2; i++){
+		
+		printf("Digite o nome do time: ");
+    	scanf("%s",&times[i].nome);
+    	printf("Digite o numero de vitorias: ");
+    	scanf("%d",&times[i].vitoria);
+    	printf("Digite o numero de empate: ");
+    	scanf("%d",&times[i].empate);
+    	printf("Digite o numero de derrotas: ");
+    	scanf("%d",&times[i].derrota);
+    	
+
+	}
+	for(i = 0 ; i < 2; i++){
+	    
+	   times[i].pontuacao = times[i].pontuacao + (times[i].vitoria*3);
+	   times[i].pontuacao = times[i].pontuacao + (times[i].vitoria*1);
+	   if(times[i].pontuacao = NULL){times[i].pontuacao = 0;}
+	    
+	}
+	for(i = 0 ; i < 2; i++){
+	    
+	   	printf("%s\n",times[i].nome);
+    	printf("%d\n",times[i].vitoria);
+    	printf("%d\n",times[i].empate);
+    	printf("%d\n",times[i].derrota);
+    	printf("%d\n",times[i].pontuacao);
+	    
+	}
+	
+
+    
+}
