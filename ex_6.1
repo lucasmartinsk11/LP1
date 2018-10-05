@@ -1,0 +1,38 @@
+#include <stdio.h>
+ 
+int preencher();
+int media();
+
+int main(){
+    
+    int n = 0, recebe = 0;
+    printf("Digite a quantidade de valores que serao inseridos: ");
+    scanf("%d",&n);
+       
+    int vec[100];
+    preencher(vec,n); 
+    recebe = media(n, &vec);
+    printf("Media: %d",recebe);   
+}
+
+int preencher(int* vet,int n){
+
+    int i = 0;
+    
+    for(i; i < n; i++){        
+        printf("Digite os valores: ");
+           scanf("%d",(vet+i));
+    }
+}
+
+int media(int n, int* vet){
+    
+    int j = 0;
+    int soma = 0;
+    
+    for (j; j < n; j++){        
+        soma = soma+(*(vet+j));  
+    }   
+    return soma/n;
+
+}
