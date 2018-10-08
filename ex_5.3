@@ -32,9 +32,9 @@ void compra(int* conta,int* conta2,int quant){
         
         if(*conta > *conta2){*conta = *conta - valor[j];}
         else{*conta2 = *conta2 - valor[j];}
-        
+        printf("Valor debitado: R$ %d,00 Valor da primeira conta: R$ %d,00 Valor da segunda conta: R$ %d,00",valor[j],*conta,*conta2);
     }
     
-    printf("Valor da primeira conta:%d\nValor da segunda conta:%d",*conta,*conta2);
+    
     
 }
