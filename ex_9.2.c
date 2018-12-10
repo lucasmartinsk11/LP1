@@ -29,5 +29,12 @@ int main(){
 	c5.valor = 5;
 	c5.prox = NULL;
 	
-	printf("%d --> %d --> %d --> %d --> %d\n", c1.valor,(*c1.prox).valor,(*c2.prox).valor,(*c3.prox).valor,(*c4.prox).valor);
+	caixa* lista = &c1;
+	
+	printf("%d --> %d --> %d --> %d --> %d\n",	(*lista).valor,
+												(*(*lista).prox).valor,
+												(*(*(*lista).prox).prox).valor,
+												lista->prox->prox->prox->valor,
+												lista->prox->prox->prox->prox->valor
+												);
 }
