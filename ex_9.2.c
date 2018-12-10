@@ -27,7 +27,7 @@ int main(){
 	c4.prox = &c5;
 	
 	c5.valor = 5;
-	c5.prox = &c1;
+	c5.prox = NULL;
 	
-	printf("%d --> %d --> %d --> %d --> %d --> %d\n", c1.valor,(*c1.prox).valor,(*c2.prox).valor,(*c3.prox).valor,(*c4.prox).valor,(*c5.prox).valor);
+	printf("%d --> %d --> %d --> %d --> %d\n", c1.valor,(*c1.prox).valor,(*c2.prox).valor,(*c3.prox).valor,(*c4.prox).valor);
 }
