@@ -44,8 +44,7 @@ void preencher(ponto* p){
 	scanf("%d", &(*p).y);
 }
 void ler_posicao(personagem* p){
-	int i;
-	int j;
+	int i,j;
 	int m[10][10];
 	for(i = 0; i < 10; i++){
 		for(j = 0; j < 10; j++){
@@ -59,15 +58,12 @@ void ler_posicao(personagem* p){
 	desenha_matriz(m);
 }
 void desenha_matriz(int m[10][10]){
-	int i;
-	int j;
-	int c = 0;	
+	int i,j;	
 	printf("   ");
 	for(i = 0; i < 10; i++){printf("%.2d ",i);}
-	printf("\n");
-	printf("\n");
+	printf("\n\n");
 	for (i=0; i<10; i++) {
-		printf("%.2d ",c);
+		printf("%.2d ",i);
 		for (j=0; j<10; j++) {
 			
 			if(m[i][j] != ""){
@@ -75,6 +71,5 @@ void desenha_matriz(int m[10][10]){
 			}else{printf("  ");}	
 		}
 	printf("\n\n");
-	c++;
 	}	
 }
