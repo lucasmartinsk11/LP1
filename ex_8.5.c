@@ -34,7 +34,7 @@ void preencher(status* s);
 int main(){
 	personagem p;
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/	
-	FILE* f = fopen("/home/ime/Área de Trabalho/ex_8.5.bin", "wb");
+	FILE* f = fopen("/home/lucas/Área de Trabalho/ex_8.5.bin", "wb");
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/		
 	preencher2(&p);
 	printf("\n\n\n");
@@ -50,7 +50,22 @@ int main(){
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/	
 	fwrite(&p.nome, sizeof(char), strlen(p.nome), f);
-	fwrite(&p.nivel, sizeof(int), strlen(p.nivel), f);
+	fwrite(&p.classe, sizeof(char), strlen(p.classe), f);
+	fwrite(&p.s.vida, sizeof(int), 1, f);
+	fwrite(&p.s.mana, sizeof(int), 1, f);
+	fwrite(&p.s.exp, sizeof(int), 1, f);
+	fwrite(&p.s.nivel, sizeof(int), 1, f);
+	if(p.e.sub == 1){
+		fwrite(&p.e.nivelclass, sizeof(int), 1, f);
+	}
+	else if(p.e.sub == 2){
+		fwrite(&p.e.circulo, sizeof(int), 1, f);
+	}
+	else if(p.e.sub == 3){
+		fwrite(&p.e.escola, sizeof(int), 1, f);
+	}
+	
+	
 	fclose(f);
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/	
 	
