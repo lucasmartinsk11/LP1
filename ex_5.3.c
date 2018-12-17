@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-void main (){
+void compra(int* conta,int* conta2,int quant);
+
+int main (){
     
     int minha_conta = 0;    
     int minha_conta2 = 0;
@@ -21,7 +23,7 @@ void main (){
 
 void compra(int* conta,int* conta2,int quant){
     
-    int valor[quant];
+    int valor[quant],total = 0;
     for(int i = 0; i < quant; i++){
         
         printf("Digite o valor da compra:\n");
@@ -29,11 +31,13 @@ void compra(int* conta,int* conta2,int quant){
         
     }
     for(int j = 0; j < quant; j++){
+			total = total + valor[j];
+		}	
+    
         
-        if(*conta > *conta2){*conta = *conta - valor[j];}
-        else{*conta2 = *conta2 - valor[j];}
-        printf("Valor debitado: R$ %d,00 Valor da primeira conta: R$ %d,00 Valor da segunda conta: R$ %d,00",valor[j],*conta,*conta2);
-    }
+        if(*conta > *conta2){*conta = *conta - total;}
+        else{*conta2 = *conta2 - total;}
+        printf("Valor debitado: R$ %d,00\n Valor da primeira conta: R$ %d,00\n Valor da segunda conta: R$ %d,00",total,*conta,*conta2);
     
     
     
